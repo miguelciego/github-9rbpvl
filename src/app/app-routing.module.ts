@@ -4,7 +4,7 @@ import { Tabla1Component } from './tabla1/tabla1.component';
 
 
 const routes: Routes = [
-  { path: 'tabla', component: Tabla1Component },
+  { path: '', component: Tabla1Component },
  // { path: 'products/:productId', component: ProductDetailsComponent },
 ];
 
