@@ -5,10 +5,10 @@ import { MatSort } from '@angular/material/sort';
 
 import { UsuaService } from '../usua.service';
 import { Observable } from 'rxjs';
-//import 'rxjs/add/observable/of';
 import {DataSource} from '@angular/cdk/collections';
 import { Usua } from '../usua';
 
+import { HttpClient }   from '@angular/common/http';
 
 @Component({
   selector: 'app-tabla1',
@@ -17,27 +17,27 @@ import { Usua } from '../usua';
 })
 export class Tabla1Component implements OnInit {
 
-  //dataSource = new MatTableDataSource(this.usuaService);
-  dataSource = new UserDataSource(this.usuaService);
+  dataSource = new MatTableDataSource();
   displayedColumns = ['name', 'email', 'phone', 'company'];
 
-  //displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  //dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource1 = new UserDataSource(this.usuaService);
   
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-  //  this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+    this.dataSource.filter = filterValue.trim().toLowerCase();
 
+  }
 
   constructor(private usuaService: UsuaService) { }
 
   ngOnInit(): void {
-  //  this.dataSource.paginator = this.paginator;
-  //  this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+    this.dataSource1.connect().subscribe(data => this.dataSource.data = data);
+    
   }
 
 }
@@ -51,3 +51,6 @@ export class UserDataSource extends DataSource<any> {
   }
   disconnect() {}
 }
+
+
+

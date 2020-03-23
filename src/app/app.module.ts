@@ -12,6 +12,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { UsuaService } from './usua.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
