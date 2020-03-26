@@ -6,7 +6,7 @@ import { Usua } from './usua';
 @Injectable()
 export class UsuaService {
 
-    private serviceUrl = 'https://jsonplaceholder.typicode.com/users';
+    private serviceUrl = 'https://jsonplaceholder.typicode.com/comments';
 
   constructor(private http: HttpClient) { }
 

@@ -13,8 +13,9 @@ import { Usua } from '../usua';
 export class Tabla1Component implements OnInit {
 
   dataSource = new MatTableDataSource();
-  displayedColumns = ['name', 'email', 'phone', 'company'];
+  displayedColumns = ['postId', 'id', 'name', 'email', 'body'];
   
+
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   
