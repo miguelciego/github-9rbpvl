@@ -12,12 +12,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UsuaService } from './usua.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HomepageComponent } from './homepage/homepage.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Tabla1Component
+    Tabla1Component,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [UsuaService],
   bootstrap: [AppComponent]
