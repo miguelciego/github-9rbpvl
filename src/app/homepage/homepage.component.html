@@ -1,6 +1,7 @@
 <button mat-raised-button ><a routerLink="/tabla1">Tabla1</a></button>
-<button mat-raised-button color='primary'>Load fichero local</button>
+<button mat-raised-button color='primary' (click)="uploads.click()">Load fichero local</button>
 <button mat-raised-button>Login OVT</button>
-<input type="file" name="files" class="form-control" 
+<input hidden type="file" name="files" class="form-control" 
                      #uploads  (change)="onChange(uploads.files)" multiple
-                     value="process"/>
+                     value="process" accept='.csv'/>
+
