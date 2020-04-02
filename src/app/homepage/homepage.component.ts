@@ -34,4 +34,11 @@ onChange(files: File[]){
     }
   }
 
+autentificar(){
+  var ovtweb = null
+  ovtweb = window.open('http://ovt.mintrabajo.gob.bo', 'Pagina_CNN', 'width=600,height=400,left=200,top=200');
+  //ovtweb.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+
+}
+
 }
