@@ -1,0 +1,39 @@
+<h1>Captura de Datos de la Persona</h1>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Carnet de Identidad</mat-label>
+    <input matInput required placeholder="304524566">
+  </mat-form-field>  
+<mat-form-field appearance="fill">
+  <mat-label>Expedido</mat-label>
+  <select matNativeControl required>
+    <option value="santacruz">Santa Cruz</option>
+    <option value="La Paz">La Paz</option>
+    <option value="mercedes">Cochabamba</option>
+    <option value="audi">Oruro</option>
+  </select>
+</mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Primer Nombre</mat-label>
+    <input matInput  required placeholder="Juan">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Segundo Nombre</mat-label>
+    <input matInput placeholder="Pepe">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido Paterno</mat-label>
+    <input matInput placeholder="Santana">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido Materno</mat-label>
+    <input matInput placeholder="Santana">
+  </mat-form-field>  
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellido de casada</mat-label>
+    <input matInput placeholder="Santana">
+  </mat-form-field>   
+</form>
+<div class="example-button-row">
+  <button mat-raised-button color='primary' routerLink="../"><mat-icon>navigate_before</mat-icon> Regresar </button>
+</div>

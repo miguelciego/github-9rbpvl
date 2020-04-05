@@ -14,13 +14,17 @@ import { UsuaService } from './usua.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { PersonasComponent } from './personas/personas.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     Tabla1Component,
-    HomepageComponent
+    HomepageComponent,
+    PersonasComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [UsuaService],
   bootstrap: [AppComponent]
